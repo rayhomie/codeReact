@@ -1,0 +1,25 @@
+{
+  "name": "codereact",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rayhomie/codeReact.git"
+  },
+  "keywords": [],
+  "author": "rayhomie <1572801584@qq.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rayhomie/codeReact/issues"
+  },
+  "homepage": "https://github.com/rayhomie/codeReact#readme",
+  "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@babel/plugin-transform-react-jsx": "^7.14.5",
+    "@babel/preset-env": "^7.14.8"
+  }
+}

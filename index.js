@@ -5,6 +5,7 @@ import ReactDOM from "./react-dom";
 const ele = (
   <div className="active" title="123">
     hello,<span>react</span>
+    <div style="background-color:red">我牛逼啊</div>
   </div>
 );
 

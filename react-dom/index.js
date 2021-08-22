@@ -13,6 +13,7 @@ function _render(vnode) {
   if (!vnode || typeof vnode === "boolean") vnode = "";
   //当节点是字符串或数字时直接插入到当前容器
   if (typeof vnode !== "object") {
+    //通过插入文本节点来解决  {"      12   "}这种情况的渲染bug
     const text = document.createElement("text");
     text.innerHTML = vnode.toString();
     return text;

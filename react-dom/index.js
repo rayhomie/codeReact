@@ -1,7 +1,3 @@
-const ReactDOM = {
-  render,
-};
-
 //react-dom中的渲染方法（参数1：虚拟dom，参数2：真实dom容器）
 function render(vnode, container) {
   container.appendChild(_render(vnode));
@@ -78,4 +74,4 @@ function createComponentVnode(component, props) {
   }
 }
 
-export default ReactDOM;
+export default { render };

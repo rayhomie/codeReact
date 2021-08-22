@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel ./entry/index.html --open",
+    "start": "parcel ./demo/index.html --open",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

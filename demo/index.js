@@ -1,5 +1,5 @@
-import React from "../react";
-import ReactDOM from "../react-dom";
+import React from "../src/react";
+import ReactDOM from "../src/react-dom";
 import "./index.css";
 
 //类组件
@@ -38,7 +38,7 @@ class ClassCom extends React.Component {
   render() {
     return (
       <span
-      className='classComponent'
+        className="classComponent"
         style={{ color: this.props.color }}
         onClick={this.handleClick.bind(this)}
       >

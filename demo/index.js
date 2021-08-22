@@ -6,7 +6,7 @@ import "./index.css";
 class ClassCom extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { num: 0 };
+    this.state = { num: 0, input: "" };
   }
 
   componentWillMount() {
@@ -30,20 +30,36 @@ class ClassCom extends React.Component {
   }
 
   handleClick() {
-    this.setState({
-      num: this.state.num + 1,
-    });
+    this.setState({ ...this.state, num: this.state.num + 1 });
+  }
+
+  handleChange(e) {
+    this.setState({ ...this.state, input: e.target.value });
+    console.log(e.target.value);
+  }
+
+  handleKeyDown(e) {
+    if (e.keyCode === 13) {
+      alert(this.state.input);
+    }
   }
 
   render() {
     return (
-      <span
-        className="classComponent"
-        style={{ color: this.props.color }}
-        onClick={this.handleClick.bind(this)}
-      >
-        类组件{this.state.num}
-      </span>
+      <div>
+        <span
+          className="classComponent"
+          style={{ color: this.props.color }}
+          onClick={this.handleClick.bind(this)}
+        >
+          类组件：点击{this.state.num}
+        </span>
+        <input
+          value={this.state.input}
+          onChange={this.handleChange.bind(this)}
+          onKeyDown={this.handleKeyDown.bind(this)}
+        />
+      </div>
     );
   }
 }

@@ -1,3 +1,8 @@
 .active {
   color: aqua;
 }
+
+.active .classComponent {
+  cursor: pointer;
+  user-select: none;
+}

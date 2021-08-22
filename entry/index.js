@@ -4,8 +4,47 @@ import "./index.css";
 
 //类组件
 class ClassCom extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { num: 0 };
+  }
+
+  componentWillMount() {
+    console.log("组件将挂载");
+  }
+
+  componentWillReceiveProps(props) {
+    console.log("props:", props);
+  }
+
+  componentDidMount() {
+    console.log("组件已经挂载");
+  }
+
+  componentWillUpdate() {
+    console.log("组件将更新");
+  }
+
+  componentDidUpdate() {
+    console.log("组件已经更新");
+  }
+
+  handleClick() {
+    this.setState({
+      num: this.state.num + 1,
+    });
+  }
+
   render() {
-    return <span style={{ color: this.props.color }}>类组件</span>;
+    return (
+      <span
+      className='classComponent'
+        style={{ color: this.props.color }}
+        onClick={this.handleClick.bind(this)}
+      >
+        类组件{this.state.num}
+      </span>
+    );
   }
 }
 //函数组件
